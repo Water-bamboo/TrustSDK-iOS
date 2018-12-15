@@ -114,7 +114,7 @@ public final class TrustWalletSDK {
         transaction.amount = amount
 
         if let dataHex = components.queryParameterValue(for: "data").flatMap({ String($0) }) {
-           transaction.payload = Data(hexString: dataHex)
+           transaction.payload = Data(hexStr: dataHex)
         }
 
         transaction.nonce = components.queryParameterValue(for: "nonce").flatMap({ UInt64($0) }) ?? 0
